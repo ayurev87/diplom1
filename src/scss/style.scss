@@ -1,0 +1,55 @@
+@import "_vars";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+//все текста на шрифт Montserrat
+html {
+    font-family: Montserrat;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 73px;
+}
+h2 {
+    font-size: 40px;
+    line-height: 49px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 37px;
+}
+h4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+h5 {
+    font-size: 20px;
+    line-height: 24px;
+}
+h6 {
+    font-size: 18px;
+    line-height: 22px;
+}
+h7 {
+    font-size: 16px;
+    line-height: 20px;
+}
+p {
+    font-size: 14px;
+    line-height: 17px;
+}
+body {
+    background-color: $backgroundBlack;
+}
+ul,
+li {
+    list-style-type: none;
+}
+.container {
+    padding-left: $indent-desktop;
+    padding-right: $indent-desktop;
+}
