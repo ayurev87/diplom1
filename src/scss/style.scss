@@ -8,40 +8,42 @@
 html {
     font-family: Montserrat;
     font-size: 10px;
+    color: $white;
 }
 
 h1 {
-    font-size: 60px;
-    line-height: 73px;
+    font-size: 6rem;
+    line-height: 7.3rem;
 }
 h2 {
-    font-size: 40px;
-    line-height: 49px;
+    font-size: 4rem;
+    line-height: 4.9rem;
 }
 h3 {
-    font-size: 30px;
-    line-height: 37px;
+    font-size: 3rem;
+    line-height: 3.7rem;
 }
 h4 {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 2.5rem;
+    line-height: 3rem;
 }
 h5 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 2rem;
+    line-height: 2.4rem;
 }
 h6 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
 }
-h7 {
-    font-size: 16px;
-    line-height: 20px;
-}
+
 p {
     font-size: 14px;
     line-height: 17px;
 }
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: $backgroundBlack;
 }
@@ -52,4 +54,18 @@ li {
 .container {
     padding-left: $indent-desktop;
     padding-right: $indent-desktop;
+}
+.btn {
+    color: $white;
+    border: 0px;
+    padding: 20px;
+    border-radius: $btn-border-radius;
+    box-shadow: $btn-box-shadow;
+    background: $linear-gradient;
+    & h6 {
+        margin: 6.5px 19px;
+    }
+}
+.btn:active {
+    background: $linear-gradient-active;
 }

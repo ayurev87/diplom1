@@ -4,6 +4,8 @@ $indent-mob768: calc(50% - 187px);
 $white: #fff;
 $darkTangerine: #fdb813;
 $coral: #ff7246;
+$orangePell: #ef9e00;
+$HarleyDavidsonOrange: #c93f14;
 $black: #0c0c0c;
 $nobel: #959595;
 $backgroundBlack: #121212;
@@ -14,5 +16,6 @@ $btn-box-shadow:
     0px 16.71px 29.21px 0px rgba(255, 166, 53, 0.12),
     0px 33px 67px 0px rgba(255, 166, 53, 0.18);
 $linear-gradient: linear-gradient(90deg, $darkTangerine, $coral);
+$linear-gradient-active: linear-gradient(90deg, $orangePell, $HarleyDavidsonOrange);
 $btn-border-radius: 50px;
 $list-border-radius: 15px;
