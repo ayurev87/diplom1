@@ -5,7 +5,7 @@
                 <div class="main-top-content">
                     <h1>{{ title }}</h1>
                     <h4>{{ subtitle }}</h4>
-                    <button class="btn">
+                    <button class="btn" onclick="location.href='#requisition'">
                         <h6>{{ btn_pickUp }}</h6>
                     </button>
                 </div>

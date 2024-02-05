@@ -1,5 +1,5 @@
 <template>
-    <section class="requisition">
+    <section id="requisition" class="requisition">
         <div class="container">
             <div class="requisition-content">
                 <h2>{{ submitYourApplication }}</h2>
@@ -36,8 +36,9 @@
                 </div>
             </div>
         </div>
-
+        
     </section>
+    
 </template>
 
 <script>
@@ -65,6 +66,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -140,13 +142,16 @@ export default {
             font-weight: 500;
             text-align: left;
             text-transform: uppercase;
-            -webkit-appearance: button;
-            appearance: button;
+            -moz-appearance: button-arrow-up;
+            -webkit-appearance: button-arrow-up;
+            appearance: none;
             outline: none;
+            position: relative;
 
             pointer-events: visibleStroke;
 
             & option {
+                
                 padding: 20px;
                 background-color: #121212;
                 border-radius: 20px;
@@ -161,4 +166,5 @@ export default {
         }
     }
 }
+
 </style>
