@@ -1,29 +1,37 @@
 <template>
     <section class="main">
-        <div class="container main-content">
-            <div class="main-top">
-                <div class="main-top-content">
-                    <h1>{{ title }}</h1>
-                    <h4>{{ subtitle }}</h4>
-                    <button class="btn" onclick="location.href='#requisition'">
-                        <h6>{{ btn_pickUp }}</h6>
-                    </button>
-                </div>
-                <div class="main-top-image">
-                    <img src="@/assets/top-image.png">
-                </div>
-            </div>
+        <div class="container">
             <div class="main-content">
-                <h4 class="main-content-title">{{ info_content }}</h4>
-                <div class="main-content-autoTitle">
-                    <h4><span v-for="auto in getAutoItems" :key="auto.id">{{ auto.name }}<span v-if="auto.id < 22">,&#32;
-                            </span>
-                            <span v-else>.</span></span>
-                    </h4>
+                <div class="main-top">
+                    <div class="main-top-content">
+                        <h1>{{ title }}</h1>
+                        <h4>{{ subtitle }}</h4>
+                        <button class="btn" onclick="location.href='#requisition'">
+                            <h6>{{ btn_pickUp }}</h6>
+                        </button>
+                    </div>
+                    <div class="main-top-image">
+                        <img src="@/assets/top-image.png">
+                    </div>
+                    <div class="main-top-button">
+                        <button class="btn" onclick="location.href='#requisition'">
+                            <h6>{{ btn_pickUp }}</h6>
+                        </button>
+                    </div>
                 </div>
-                <div class="main-content-autoImg">
-                    <img v-for="auto in   getAutoItems  " :key="auto.id" :src="require(`@/assets/marok/${auto.logo}`)"
-                        alt="">
+                <div class="main-content">
+                    <h4 class="main-content-title">{{ info_content }}</h4>
+                    <div class="main-content-autoTitle">
+                        <h4><span v-for="auto in getAutoItems" :key="auto.id">{{ auto.name }}<span
+                                    v-if="auto.id < 22">,&#32;
+                                </span>
+                                <span v-else>.</span></span>
+                        </h4>
+                    </div>
+                    <div class="main-content-autoImg">
+                        <img v-for="auto in   getAutoItems  " :key="auto.id" :src="require(`@/assets/marok/${auto.logo}`)"
+                            alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,10 +72,13 @@ export default {
     padding-bottom: 53px;
 
     &-top {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
         justify-content: center;
         gap: 17px;
         padding-bottom: 76px;
+        padding-left: 10px;
+        padding-right: 10px;
 
         &-content {
             padding-top: 93px;
@@ -81,9 +92,21 @@ export default {
                 color: $nobel;
             }
         }
+
+        &-image img {
+            width: 100%;
+        }
+
+        &-button {
+            display: none;
+        }
+
     }
 
     &-content {
+        padding-left: 10px;
+        padding-right: 10px;
+
         &-title {
             font-weight: 500;
             text-align: center;
@@ -106,6 +129,65 @@ export default {
 
             & img {
                 width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .main {
+        background-size: 100%;
+
+        &-top {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+
+        &-content {
+            padding-left: 22px;
+            padding-right: 22px;
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-autoTitle {
+                font-size: 20px;
+
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .main {
+        &-top {
+            padding-bottom: 35px;
+
+            &-content {
+                & button {
+                    display: none;
+                }
+            }
+
+            &-button {
+                display: flex;
+                justify-content: center;
+            }
+
+            &-content {
+                padding-left: 10px;
+                padding-right: 10px;
+
+
+                &-title {
+                    font-weight: 500;
+                    text-align: center;
+                    padding-bottom: 37px;
+                }
+
             }
         }
     }

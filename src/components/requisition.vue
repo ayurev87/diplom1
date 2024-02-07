@@ -7,14 +7,14 @@
                 <div class="requisition-block">
                     <h4>Выберите марку</h4>
                     <div class="requisition-ListBlok">
-                        <div>
+                        <div class="requisition-ListBlok-left">
                             <select v-model="selectedMarka">
                                 <option v-for="auto in getAutoItems" :key="auto.id" v-bind:value="auto.id">
                                     <h6>{{ auto.name }}</h6>
                                 </option>
                             </select>
                         </div>
-                        <div>
+                        <div class="requisition-ListBlok-right">
                             <select v-model="selectedModel">
                                 <option v-for="models in getAutoModel(selectedMarka)" :key="models.id"
                                     v-bind:value="models.id">
@@ -36,9 +36,8 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
-    
 </template>
 
 <script>
@@ -78,8 +77,12 @@ export default {
     background-position: left top 10%, right top;
     height: 624px;
     padding-top: 26px;
+    background-size: auto;
+
 
     &-content {
+        padding-left: 20px;
+        padding-right: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -100,25 +103,34 @@ export default {
     }
 
     &-block {
-        padding: 34px 96px 26px 91px;
+        padding-top: 34px;
         border-radius: 30px;
         box-shadow: 0px 22px 50px -17px #000;
         background-color: rgba(27, 27, 27, 0.6);
-
+        width: 100%;
         backdrop-filter: blur(40px);
         display: flex;
         flex-direction: column;
         align-items: center;
 
+
         & h4 {
             padding-bottom: 30px;
+        }
+
+        & .btn {
+            margin-top: 31px;
+            margin-bottom: 26px;
         }
 
 
     }
 
     &-ListBlok {
-        display: flex;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
         gap: 25px;
 
@@ -130,9 +142,17 @@ export default {
             background-clip: border-box;
         }
 
+        &-left {
+            margin-left: 61px;
+        }
+
+        &-right {
+            margin-right: 61px;
+        }
+
         & select {
             padding: 20px;
-            width: 387px;
+            width: 100%;
             height: 62px;
             border-radius: 50px;
             border: 0px;
@@ -151,7 +171,7 @@ export default {
             pointer-events: visibleStroke;
 
             & option {
-                
+
                 padding: 20px;
                 background-color: #121212;
                 border-radius: 20px;
@@ -165,6 +185,58 @@ export default {
             border: 0px;
         }
     }
+
+    &-lock {
+        padding-top: 18px;
+        text-align: center;
+
+        & h4 {
+            padding-bottom: 0px;
+        }
+
+        & span {
+            background: $linear-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: 14px;
+            font-weight: 700;
+            padding-right: 5px;
+        }
+    }
 }
 
+@media screen and (max-width: 834px) {
+    .requisition {
+        background-image: none;
+
+        &-content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .requisition {
+        &-content {
+            text-align: center;
+        }
+
+        &-ListBlok {
+            &-left {
+                margin-left: 0px;
+            }
+
+            &-left option {
+                width: 350px;
+            }
+
+            &-right {
+                margin-right: 0px;
+            }
+
+        }
+    }
+
+}
 </style>

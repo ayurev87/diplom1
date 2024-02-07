@@ -59,13 +59,47 @@ li {
     color: $white;
     border: 0px;
     padding: 20px;
+    text-transform: uppercase;
     border-radius: $btn-border-radius;
     box-shadow: $btn-box-shadow;
     background: $linear-gradient;
+    font-size: 18px;
+    font-weight: 700;
+
     & h6 {
         margin: 6.5px 19px;
     }
 }
 .btn:active {
     background: $linear-gradient-active;
+}
+@media screen and (max-width: 834px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 4.9rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    h4 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    h5 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    h6 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .container {
+        padding-left: $indent-tablet;
+        padding-right: $indent-tablet;
+    }
 }
