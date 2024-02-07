@@ -81,7 +81,7 @@ export default {
             opacity: 0.6;
         }
 
-        .button {
+        & .button {
             padding-top: 30px;
             display: flex;
             justify-content: right;
@@ -107,5 +107,31 @@ export default {
         }
 
     }
+}
+
+@media screen and (max-width: 430px) {
+    .comfort {
+        &-content {
+            & .image {
+                & .setki {
+                    width: 78px;
+                }
+
+                & .img {
+                    border-radius: 20px;
+                }
+            }
+
+            & h6 {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            & .button {
+                justify-content: center;
+            }
+        }
+    }
+
 }
 </style>

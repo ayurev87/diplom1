@@ -135,4 +135,45 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 430px) {
+    .advantage {
+        &-outContent {
+            & h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            & h3 {
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 61px;
+            }
+        }
+
+        &-lists {
+
+
+            & li {
+                flex-direction: column;
+
+                & h5 {
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                & img {
+                    height: 150px;
+                }
+            }
+        }
+
+        &-image {
+
+            & .sertificate {
+                width: 320px;
+            }
+        }
+    }
+}
 </style>

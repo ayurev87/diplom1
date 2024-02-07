@@ -143,10 +143,32 @@ export default {
 
         &-header {
             max-width: 600px;
+            padding-top: 37px;
         }
 
         &-colonna {
             grid-template-columns: 2fr 1fr;
+        }
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .protection {
+        &-colonna {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-bottom: 31px;
+        }
+
+        &-empty {
+            height: 299px;
+        }
+
+        &-background {
+
+            background-position-y: 179px;
+            background-size: 100%;
         }
     }
 }

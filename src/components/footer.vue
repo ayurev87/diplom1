@@ -147,4 +147,16 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 430px) {
+    .footer {
+        background-size: 100%, 100%;
+
+        &-title {
+            text-align: center;
+            padding-top: 38px;
+            padding-bottom: 68px;
+        }
+    }
+}
 </style>
