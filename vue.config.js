@@ -2,6 +2,9 @@ const { defineConfig } = require('@vue/cli-service')
 const webpack = require('webpack');
 
 module.exports = defineConfig({
+  publicPath: '/diplom1/',
+  // publicPath: process.env.NODE_ENV === 'production'  ? '/' + process.env.CI_PROJECT_NAME + '/'
+  //   : '/',
   transpileDependencies: true,
   configureWebpack: {
     plugins: [
@@ -13,8 +16,3 @@ module.exports = defineConfig({
     ],
   },
 })
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/' + process.env.CI_PROJECT_NAME + '/'
-    : '/'
-}
